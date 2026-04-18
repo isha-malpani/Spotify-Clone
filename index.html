@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ✅ Meta setup for responsiveness & compatibility -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ✅ FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="C:\Users\hp\Documents\FullStackWebDevAC\HTML\Assets\logo.png">
+    <!-- ✅ Project Title -->
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- ✅ Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- ✅ Main container wrapping all sections -->
+    <div class="main">
+      <!-- ✅ Top navigation bar with logo, search, and user account buttons -->
+      <!-- Recruiter Highlight: Shows ability to recreate sticky, responsive navbars -->
+      <div class="top-bar">
+        <div class="search-bar">
+          <img src="./Assets/spotifyLogoWhite.png" alt="Spotify Logo">
+          <div class="home-icon">
+            <img src="./Assets/homeIcon.png" alt="Home Icon">
+          </div>
+          <div class="search">
+            <div class="search-option1">
+              <img src="./Assets/searchIcon.png" alt="Search Icon">
+              <input type="search" placeholder="What do you want to play?">
+            </div>
+            <div class="search-option2">
+              <img src="./Assets/shoppingBagIcon.png" alt="Shopping Bag Icon" class="search-opt2">
+            </div>
+          </div>
+        </div>
+        <div class="account">
+          <button class="badge account-item hide">Explore Premium</button>
+          <button class="dark-badge account-item"><i class="fa-regular fa-circle-down" style="margin-right: 5px;"></i>Install App</button>
+          <i class="fa-regular fa-user account-item"></i>
+        </div>
+      </div>
+      <!-- ✅ Sidebar for Library & Playlist features -->
+      <!-- Recruiter Highlight: Demonstrates hover animation & progressive UI reveal -->
+      <div class="sidebar">
+        <div class="library">
+          <div class="options">
+            <div class="lib-option">
+              <img src="./Assets/library_icon.png" alt="Library Logo">
+              <a href="#" class="A">Your Library</a>
+            </div>
+            <div class="icon">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+          <div class="lib-box">
+            <div class="box">
+              <p class="box-p1">Create your first playlist</p>
+              <p class="box-p2">It's easy, we'll help you</p>
+              <button class="badge">Create playlist</button>
+            </div>
+            <div class="box">
+              <p class="box-p1">Let's find some podcasts to follow</p>
+              <p class="box-p2">We'll keep you updated on new episodes</p>
+              <button class="badge">Browse podcasts</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ✅ Central scrollable area with cards and featured playlists -->
+      <!-- Recruiter Highlight: Custom hover effects, layout reuse with BEM-like structure -->
+      <div class="main-content">
+        <div class="sticky-nav">
+          <button class="nav-btn">All</button>
+          <button class="nav-btn2">Music</button>
+          <button class="nav-btn2">Podcasts</button>
+        </div>
+        <div class="card-head">
+          <h2>Recently Played</h2>
+          <p>Show all</p>
+        </div>
+        <div class="cards-container">
+          <div class="card">
+            <img src="./Assets/card1img.jpeg" alt="Card Image" class="card-img">
+            <div class="play-icon">
+              <i class="fa-solid fa-circle-play"></i>
+            </div>
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Your daily updates of the most played tracks...</p>
+          </div>
+        </div>
+        <div class="card-head">
+          <h2>Trending Now Near You</h2>
+          <p>Show all</p>
+        </div>
+        <div class="cards-container">
+          <div class="card">
+            <img src="./Assets/card2img.jpeg" alt="Card Image" class="card-img">
+            <div class="play-icon">
+              <i class="fa-solid fa-circle-play"></i>
+            </div>
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Your daily updates of the most played tracks...</p>
+          </div>
+          <div class="card">
+            <img src="./Assets/card3img.jpeg" alt="Card Image" class="card-img">
+            <div class="play-icon">
+              <i class="fa-solid fa-circle-play"></i>
+            </div>
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Your daily updates of the most played tracks...</p>
+          </div>
+          <div class="card">
+            <img src="./Assets/card4img.jpeg" alt="Card Image" class="card-img">
+            <div class="play-icon">
+              <i class="fa-solid fa-circle-play"></i>
+            </div>
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Your daily updates of the most played tracks...</p>
+          </div>
+        </div>
+        <div class="card-head">
+          <h2>Featured Charts</h2>
+          <p>Show all</p>
+        </div>
+        <div class="cards-container">
+          <div class="card">
+            <img src="./Assets/card5img.jpeg" alt="Card Image" class="card-img">
+            <div class="play-icon">
+              <i class="fa-solid fa-circle-play"></i>
+            </div>
+            <p class="card-title">Top Songs - Global</p>
+            <p class="card-info">Your daily updates of the most played tracks...</p>
+          </div>
+          <div class="card">
+            <img src="./Assets/card6img.jpeg" alt="Card Image" class="card-img">
+            <div class="play-icon">
+              <i class="fa-solid fa-circle-play"></i>
+            </div>
+            <p class="card-title">Top Songs - India</p>
+            <p class="card-info">Your daily updates of the most played tracks...</p>
+          </div>
+          <div class="card">
+            <img src="./Assets/card1img.jpeg" alt="Card Image" class="card-img">
+            <div class="play-icon">
+              <i class="fa-solid fa-circle-play"></i>
+            </div>
+            <p class="card-title">Top 50 - Global</p>
+            <p class="card-info">Your daily updates of the most played tracks...</p>
+          </div>
+        </div>
+        <div class="footer">
+            <div class="line">
+              <div class="line-info">
+                <h4>Company</h4>
+                <p>About</p>
+                <p>Jobs</p>
+                <p>For The Record</p>
+              </div>
+              <div class="line-info">
+                <h4>Communities</h4>
+                <p>For Artists</p>
+                <p>Developers</p>
+                <p>Advertising</p>
+                <p>Investors</p>
+                <p>Vendors</p>
+              </div>
+              <div class="line-info">
+                <h4>Useful Links</h4>
+                <p>Support</p>
+                <p>Free Mobile App</p>
+                <p>Popular by Country</p>
+              </div>
+              <div class="line-info">
+                <h4>Spotify Plans</h4>
+                <p>Premium Individual</p>
+                <p>Premium Duo</p>
+                <p>Premium Family</p>
+                <p>Premium Student</p>
+                <p>Spotify Free</p>
+              </div>
+              <div class="line-info info2">
+                <div class="social-media-logos">
+                  <div class="logos">
+                    <i class="fa-brands fa-instagram"></i>
+                  </div>
+                  <div class="logos">
+                    <i class="fa-brands fa-twitter"></i>
+                  </div>
+                  <div class="logos">
+                    <i class="fa-brands fa-facebook"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="line">
+              <div class="foot-content">
+                <h5>Legal</h5>
+                <h5>Safety & Privacy Center</h5>
+                <h5>Privacy Policy</h5>
+                <h5>Cookies</h5>
+                <h5>About Ads</h5>
+                <h5>Accessibility</h5>
+              </div>
+              <div class="copyr">&copy; 2025 Spotify AB</div>
+            </div>
+        </div>
+      </div>
+      <!-- ✅ Persistent Music Player at bottom (Spotify-style) -->
+      <!-- Recruiter Highlight: Modern fixed positioning with interactive controls -->
+      <div class="music-player">
+        <div class="album">
+          <div class="cover">
+            <img src="./Assets/AlbumImage.jpg" class="album-image"/>
+            <i class="fa-solid fa-circle-chevron-down"></i>
+          </div>
+          <div class="album-para">
+            <p class="para" style="font-size: 0.8rem; color: #fff;">Satranga (From "ANIMAL")</p>
+            <p class="para">Arijit Singh, Shreyas Puranik, Siddharth - Garima</p>
+          </div>
+          <img src="./Assets/plusIcon.png" class="album-plus-icon"></i>
+        </div>
+        <div class="player">
+          <div class="player-controls">
+            <img src="./Assets/player_icon1.png" class="player-control-icon icon1">
+            <img src="./Assets/player_icon2.png" class="player-control-icon">
+            <img src="./Assets/player_icon3.png" class="player-control-icon icon3" >
+            <img src="./Assets/player_icon4.png" class="player-control-icon">
+            <img src="./Assets/player_icon5.png" class="player-control-icon icon5">
+          </div>
+          <div class="playback-bar">
+            <span class="curr-time">00:00</span>
+            <input type="range" min="0" max="100" class="progress-bar" step="1">
+            <span class="tot-time">03:33</span>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="controls-icon">
+            <img src="./Assets/mediaPlay.png" class="controls-icons play">
+            <img src="./Assets/microphone.png" class="controls-icons mic">
+            <img src="./Assets/queue.png" class="controls-icons queue">
+            <img src="./Assets/deviceConnect.png" class="controls-icons connect">
+            <img src="./Assets/volume.png" class="controls-icons vol">
+            <input type="range" min="0" max="100" class="progress-bar controls-progress-bar" step="1">
+            <img src="./Assets/miniMedia.png" class="controls-icons mini">
+            <img src="./Assets/fullScreen.png" class="controls-icons full">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
