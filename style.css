@@ -1,0 +1,717 @@
+/* 
+  ✅ Spotify Clone - Custom CSS Stylesheet
+  🔥 Built entirely using HTML & CSS
+  👨‍💻 Created to demonstrate UI layout design, component-based styling & animation
+*/
+
+/* ✅ Global Base Styles */
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+/* ✅ Layout: Flex layout with sidebar, content, and music player */
+.main {
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+
+/* ✅ Sticky Top Bar */
+.top-bar {
+    background-color: black;
+    height: 3rem;
+    width: 100%;
+    margin: -0.5rem;
+    padding: 0.5rem;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ✅ Search Bar with Icons */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.search-bar img {
+    height: 2.25rem;
+    width: 2.25rem;
+    position: relative;
+    margin-left: 1rem;
+}
+
+.search-bar img:hover {
+    cursor: pointer;
+}
+
+.home-icon {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: #1F1F1F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    opacity: 0.9;
+}
+
+.home-icon img {
+    height: 1.75rem;
+    width: 1.75rem;
+    margin-left: 0rem;
+}
+
+.home-icon:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.search {
+    height: 3rem;
+    width: 29.625rem;
+    background-color: #1F1F1F;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0 0.5rem;
+    opacity: 0.9;
+}
+
+.search:hover {
+    opacity: 1;
+}
+
+.search img {
+    height: 1.75rem;
+    width: 1.75rem;
+}
+
+.search input {
+    background-color: #1F1F1F;
+    border: none;
+    font-size: 1rem;
+    font-weight: 550;
+    width: 20rem;
+    position: absolute;
+    margin-left: 0.5rem;
+    margin-top: 0.9rem;
+}
+
+.search-option1 img {
+    position: relative;
+    margin-top: 0.65rem;
+    margin-left: 0.75rem;
+}
+
+.search-option2 {
+    border-left: 0.5px solid #A7A7A7;
+    padding-left: 0.1rem;
+    height: 2rem;
+    margin-top: 0.5rem;
+}
+
+.search-option2 img {
+    position: relative;
+    margin-top: 0.2rem;
+    margin-right: 0.75rem;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-right: 1.75rem;
+}
+
+.account-item {
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 1000px) {
+    .hide {
+        display: none;
+    }
+}
+
+/* ✅ Sidebar Styling */
+.sidebar {
+    width: 17.6875rem;
+    border-radius: 1rem;
+    margin-top: 3.5rem;
+    margin-right: 0.5rem;
+    background-color: black;
+    margin-bottom: 6.5rem;
+}
+
+.library {
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    padding: 0.5rem 0.75rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lib-option img{
+    height: 1.25rem;
+    width: 1.25rem;
+    opacity: 0.5;
+    transform: translateX(-200%);
+    transition: transform 0.3s ease;
+}
+
+.library:hover img{
+    transform: translateX(0);
+}
+
+.lib-option img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.lib-option a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    margin: 0 0 0 0.75rem;
+    position: relative;
+    left: -10%;
+    transition: left 0.3s ease;
+}
+
+.library:hover a {
+    left: 0;
+}
+
+.icon {
+    height: 2.1875rem;
+    width: 2.1875rem;
+    background-color: #1F1F1F;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.icon:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.box {
+    background-color: #1F1F1F;
+    height: auto;
+    margin: 2.5rem 0 0.5rem 0;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.box-p1 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.box-p2 {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+.badge {
+    background-color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+
+.dark-badge {
+    background-color: #000;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+    color: white;
+    opacity: 0.5;
+}
+
+.dark-badge:hover {
+    transform: scale(1.03);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.badge:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* ✅ Scrollable Content Area */
+.main-content {
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+    margin-top: 3.5rem;
+    margin-bottom: 5.5rem;
+    background-color: #121212;
+    padding: 0 2.5rem;
+}
+
+/* ✅ Custom Scrollbar Only on Hover */
+.main-content::-webkit-scrollbar {
+    appearance: none;
+    width: 10px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background-color: #A7A7A7;
+    display: none;
+}
+
+.main-content:hover::-webkit-scrollbar-thumb {
+    display: block;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    z-index: 4;
+}
+
+.nav-btn {
+    background-color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    height: 2rem;
+    width: fit-content;
+    opacity: 1;
+}
+
+.nav-btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.nav-btn2 {
+    background-color: #FFFFFF1A;
+    color: #fff;
+    border: none;
+    opacity: 0.9;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 750;
+    height: 2rem;
+    width: fit-content;
+    margin-left: 0.5rem;
+}
+
+.nav-btn2:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-head p {
+    font-size: 0.875rem;
+    color: #B3B3B3;
+    font-weight: 600;
+}
+
+.card-head h2:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.card-head p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cards-container {
+    display: flex;
+}
+
+.card {
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    margin-right: 1.5rem;
+}
+
+.card:hover {
+    background-color: #232323;
+    cursor: pointer;
+}
+
+.play-icon {
+    position: absolute;
+    bottom: 90px;
+    left: 70%;
+    transform: translate(-50%, 100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    z-index: 2;
+}
+
+.card:hover .play-icon {
+  transform: translate(-50%, 0%);
+  opacity: 1;
+}
+
+.play-icon:hover i{
+    transform: scale(1.05);
+    color: #69f79d;
+}
+
+.play-icon i {
+    color: #1bd760;
+    font-size: 3rem;
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 0.5rem;
+    display: block;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-info {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+/* ✅ Footer Section with Company Info */
+.footer {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    height: 50%;
+    width: 98%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.line-info h4{
+    color: white;
+}
+
+.line-info p {
+    color: #B3B3B3;
+    font-weight: 500;
+}
+
+.line-info p:hover {
+    text-decoration: underline;
+    color: #fff;
+    cursor: pointer;
+}
+
+.social-media-logos {
+    display: flex;
+}
+
+.social-media-logos i {
+    font-size: 1rem;
+    color: white;
+}
+
+.logos {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #292929;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.33rem 0;
+    margin-left: 0.5rem;
+}
+
+.logos:hover {
+    background-color: #dfdbdb;
+    color: white;
+}
+
+.foot-content {
+    display: flex;
+}
+
+.foot-content h5 {
+    margin-right: 1rem;
+    color: #B3B3B3;
+}
+
+.foot-content h5:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.copyr {
+    margin: 1.33rem 0;
+}
+
+/* ✅ Persistent Music Player with Flexbox */
+.music-player {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    height: 4.5rem;
+    width: 100%;
+    margin: -0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album {
+    width: 25%;
+}
+
+.cover {
+    display: flex;
+    align-items: center;
+}
+
+.cover i {
+    display: none;
+    z-index: 1;
+    color: #121212;
+    opacity: 0.5;
+    font-size: 1.25rem;
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 1.6rem;
+}
+
+.cover i:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    display: block;
+}
+
+.album-image {
+    height: 3rem;
+    margin-left: 5px;
+    position: absolute;
+    margin-bottom: -30px;
+}
+
+.album-image:hover ~ i {
+    display: block;
+}
+
+.album-para {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 70px;
+}
+
+.para {
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: #A7A7A7;
+    margin: 2px 0 2px 0;
+}
+
+.para:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.album-plus-icon {
+    opacity: 0.6;
+    position: absolute;
+    bottom: 25px;
+    left: 325px;
+    opacity: 0.5;
+}
+
+.album-plus-icon:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.player {
+    width: 50%;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-control-icon {
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+}
+
+.icon1, .icon5 {
+    opacity: 0.5;
+}
+
+.player-control-icon:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.icon3 {
+    height: 2rem;
+    opacity: 1;
+}
+
+.icon3:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.playback-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+.progress-bar::-webkit-slider-runnable-track:hover {
+    background-color: #1bd760;
+}
+
+.progress-bar::-webkit-slider-thumb:hover {
+    background-color: #ddd;
+}
+
+.controls {
+    width: 25%;
+}
+
+.controls-icons {
+    opacity: 0.5;
+}
+
+.controls-icons:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.play {
+    height: 2rem;
+    position: relative;
+    right: -5px;
+    top: -1px;
+}
+
+.mic {
+    height: 3rem;
+    position: relative;
+    bottom: -2px;
+    left: 0px;
+}
+
+.queue {
+    height: 1.3rem;
+    position: relative;
+    right: -5px;
+}
+
+.connect {
+    height: 2.5rem;
+    position: relative;
+    right: -10px;
+}
+
+.vol {
+    height: 3rem;
+}
+
+.mini {
+    height: 4.2rem;
+    position: relative;
+    right: 10px;
+}
+
+.full {
+    height: 3.8rem;
+    position: relative;
+    right: 40px;
+}
+
+.controls-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls-progress-bar {
+    width: 90px;
+}
